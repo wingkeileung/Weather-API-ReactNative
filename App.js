@@ -28,9 +28,28 @@ export default class App extends React.Component {
           </View>  
         </View>
         <View style={styles.footer}>
-          <Text>
-            footer
-          </Text>
+          <View sytle={{justifyContent: 'center', alignItems: 'center', flex: 1}}>
+            <Text style={styles.date}>
+              Date And Time
+            </Text>
+          </View>
+          <View style={styles.footerInfo}>
+            <View style={{flex:1}}>
+              <Text>
+                Pressure
+              </Text>
+            </View>
+            <View style={{flex:1}}>
+              <Text>
+                Wind Speed
+              </Text>            
+            </View>
+            <View style={{flex:1}}>
+              <Text>
+                Min Temperature
+              </Text>            
+            </View>
+          </View>
         </View>
       </View>
     );
@@ -46,19 +65,19 @@ const styles = StyleSheet.create({
   },
   header:{
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'red',
+    paddingTop: 50,
+    paddingLeft: 30,
+    backgroundColor: 'white',
     width: '100%',
   },
   content: {
     flex: 3,
-    backgroundColor: 'green',
+    backgroundColor: 'white',
     width: '100%',
   },
   footer: {
-    flex: 2,
-    backgroundColor: 'blue',
+    flex: 1,
+    backgroundColor: 'white',
     width: '100%',
   },
   TextInput: {
@@ -66,10 +85,11 @@ const styles = StyleSheet.create({
     height: 40,
     borderColor: 'gray',
     borderWidth: 1,
-    backgroundColor: 'gray',
+    backgroundColor: 'lightgray',
   },
   temperature: {
     fontSize: 50,
+    fontWeight: 'bold',
     color: 'black',
     paddingTop: 50,
     paddingLeft: 30,
@@ -85,5 +105,17 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     paddingLeft: 30,
     fontSize: 20,
-  }
+  },
+  date: {
+    fontSize: 25, 
+    fontWeight: 'bold',
+    color: 'skyblue', 
+    paddingBottom: 20,
+    paddingLeft: 30,
+  },
+  footerInfo: {
+    flexDirection: 'row', 
+    paddingHorizontal: 20, 
+    backgroundColor: 'white'
+  },
 });
